@@ -118,8 +118,16 @@ var timerId;
     }
 
   function quizEnd() {
-    console.log("QUIZ IS OVER!!")
-  };
+      questionsEl.setAttribute("class", "hide");
+     var endQuestionScreen = document.getElementById("end-screen");
+     endQuestionScreen.removeAttribute("class");
+     //Use time as the score and render by setting it equal to textContent
+     var score = document.getElementById("final-score");
+     score.textContent = time;
+     console.log("QUIZ IS OVER!!")
+ };
+    
+  
 
 
   
